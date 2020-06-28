@@ -1,18 +1,18 @@
 class Keys {
   constructor() {
     document.addEventListener("keyup", (e) => {
-      this._clear(e.code);
+      this._clear(e.keyCode);
     });
 
     document.addEventListener("keydown", (e) => {
-      this._set(e.code);
+      this._set(e.keyCode);
     });
   }
 
   _keyDown = [];
 
   _set(code) {
-    this.keyDown[code] = true;
+    this._keyDown[code] = true;
   }
 
   _clear(code) {
@@ -20,7 +20,7 @@ class Keys {
   }
 
   isDown(code) {
-    return this._keyDown[code] === false;
+    return this._keyDown[code] === true;
   }
 }
 

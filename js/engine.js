@@ -18,7 +18,7 @@ const ctx = (() => {
 })();
 
 const _rendered = (() => {
-  return window.requestAnimationFrame || webkitRequestAnimationFrame;
+  return window.requestAnimationFrame || window.webkitRequestAnimationFrame;
 })();
 
 let _game = () => console.log("Game is not loaded");
